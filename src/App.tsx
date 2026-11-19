@@ -1,10 +1,20 @@
+import { Navbar } from "./components/layout/NavBar"
+import { SECTIONS } from "./data/sections"
+
 function App() {
   return (
-    <div className="p-10">
-      <h1 className="font-display text-6xl">Renacimiento</h1>
-      <p className="mt-4 text-cream-muted">Europa, 1300 - 1600</p>
-      <button className="mt-6 bg-accent px-6 py-3 text-sm">Explorar</button>
-    </div>
+    <>
+        <Navbar />
+        <main>
+            {SECTIONS.map((section) => (
+            <section key={section.id} id={section.id} className="flex min-h-screen items-center px-6">
+                <h2 className="font-display text-5xl">
+                {section.number}. {section.title}
+                </h2>
+            </section>
+            ))}
+        </main>
+    </>
   )
 }
 

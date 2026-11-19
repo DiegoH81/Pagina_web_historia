@@ -16,7 +16,7 @@ const VARIANTS: Record<ButtonVariant, string> = {
 export function Button({ href, children, variant = 'primary' }: ButtonProps)
 {
     return (
-        <a href={href} className={`inline-block text-sm transition-colors ${VARIANTS[variant]}`}>
+        <a href={href} className={`inline-block text-base transition-colors ${VARIANTS[variant]}`}>
         {children}
         </a>
     )

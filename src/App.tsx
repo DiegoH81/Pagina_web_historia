@@ -5,6 +5,7 @@ import { Introduction } from './sections/Introduction'
 import { Causes } from './sections/Causes'
 import { Contributions } from './sections/Contributions'
 import { Discoveries } from './sections/Discoveries'
+import { Characters } from './sections/Characters'
 import { Consequences } from './sections/Consequences'
 import { Legacy } from './sections/Legacy'
 import { Conclusions } from './sections/Conclusions'
@@ -12,21 +13,22 @@ import { Conclusions } from './sections/Conclusions'
 
 function App()
 {
-  return (
-    <>
-        <Navbar />
-        <main>
-            <Hero/>
-            <Introduction />
-            <Causes />
-            <Contributions />
-            <Discoveries />
-            <Consequences />
-            <Legacy />
-            <Conclusions />
-        </main>
-    </>
-  )
+    return (
+        <>
+            <Navbar />
+            <main>
+                <Hero/>
+                <Introduction />
+                <Causes />
+                <Contributions />
+                <Discoveries />
+                <Characters />
+                <Consequences />
+                <Legacy />
+                <Conclusions />
+            </main>
+        </>
+    )
 }
 
 export default App

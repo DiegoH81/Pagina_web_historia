@@ -1,7 +1,6 @@
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
 import type { ContributionArea } from '../../data/contributions'
-import { FleurDeLis } from '../ui/FleurDeLis'
 
 interface ContributionDetailProps
 {

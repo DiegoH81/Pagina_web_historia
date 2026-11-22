@@ -1,5 +1,4 @@
 import { Navbar } from "./components/layout/NavBar"
-import { SECTIONS } from "./data/sections"
 
 import { Hero } from "./sections/Hero"
 import { Introduction } from './sections/Introduction'

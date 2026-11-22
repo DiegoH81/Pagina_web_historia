@@ -4,6 +4,7 @@ import { Hero } from "./sections/Hero"
 import { Introduction } from './sections/Introduction'
 import { Causes } from './sections/Causes'
 import { Contributions } from './sections/Contributions'
+import { Discoveries } from './sections/Discoveries'
 
 
 function App()
@@ -16,6 +17,7 @@ function App()
             <Introduction />
             <Causes />
             <Contributions />
+            <Discoveries />
 
 
             

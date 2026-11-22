@@ -1,0 +1,539 @@
+.env-root
+{
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    height: calc(100svh - 4rem);
+    overflow: hidden;
+    background: #161b28;
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+}
+
+.env-sky, .env-canvas
+{
+    position: absolute;
+    inset: 0;
+}
+
+.env-sky
+{
+    z-index: -1;
+    transition: background-color 400ms;
+    overflow: hidden;
+}
+
+.env-canvas
+{
+    z-index: 1;
+}
+
+.env-header
+{
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: clamp(18px, 3.6vw, 48px);
+    pointer-events: none;
+}
+
+.env-kicker
+{
+    color: var(--color-gold);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    font-weight: 650;
+}
+
+.env-heading h2
+{
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(32px, 4.2vw, 65px);
+    line-height: 1;
+    margin: 12px 0 8px;
+    text-shadow: 0 2px 22px #0005;
+}
+
+.env-heading h2 em
+{
+    font-size: 0.36em;
+    font-weight: normal;
+    font-style: normal;
+    opacity: 0.83;
+    letter-spacing: 0.03em;
+}
+
+.env-heading p
+{
+    font-size: clamp(12px, 1.2vw, 14px);
+    margin: 0;
+    color: #f1e5d2;
+    text-shadow: 0 2px 14px #0008;
+}
+
+.env-city-choice
+{
+    display: flex;
+    pointer-events: auto;
+    background: #201c1bc9;
+    border: 1px solid #e0bb805e;
+    border-radius: 32px;
+    padding: 4px;
+    backdrop-filter: blur(10px);
+}
+
+.env-city-choice button
+{
+    padding: 9px 18px;
+    border: none;
+    border-radius: 24px;
+    color: #f1dcc2;
+    background: transparent;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.env-city-choice button.active
+{
+    color: var(--color-ink);
+    background: var(--color-gold);
+}
+
+@media (max-width: 680px)
+{
+    .env-header
+    {
+        display: block;
+        padding: 18px;
+    }
+
+    .env-city-choice
+    {
+        width: max-content;
+        margin-top: 15px;
+    }
+
+    .env-heading p
+    {
+        max-width: 280px;
+    }
+
+}
+
+.env-loading
+{
+    position: absolute;
+    z-index: 8;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 22px;
+    border-radius: 12px;
+    border: 1px solid #c7ad855e;
+    color: #f7edda;
+    background: #161b28e0;
+    font-size: 13px;
+}
+
+/* V2 — Profundidad visual e interacción editorial */
+.env-root
+{
+    background: #151a26;
+}
+
+.env-sky-glow
+{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 70% 75%, #e5a46742, transparent 60%);
+    transition: opacity 0.5s ease;
+}
+
+.env-vignette
+{
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, #0d0d13aa 0%, #13131a15 30%, #12141a00 67%, #0c0d14a6 100%), linear-gradient(0deg, #101018a3 0%, transparent 25%, transparent 75%, #100f17a8 100%);
+}
+
+.env-header
+{
+    z-index: 6;
+}
+
+.env-landmark-pin
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: none;
+    background: #181615e5;
+    color: #f2e4d0;
+    padding: 4px 10px 4px 4px;
+    border-radius: 30px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: 12px;
+    line-height: 1;
+    box-shadow: 0 4px 20px #000a, 0 0 0 1px #e3bc7a7f;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+    pointer-events: auto;
+}
+
+.env-landmark-pin::after
+{
+    content: "";
+    position: absolute;
+    left: 18px;
+    bottom: -18px;
+    width: 1px;
+    height: 18px;
+    background: linear-gradient(#e3bc7ac4, transparent);
+    pointer-events: none;
+}
+
+.env-landmark-pin:hover,
+.env-landmark-pin:focus-visible,
+.env-landmark-pin.is-selected
+{
+    transform: translateY(-3px);
+    background: #3c2c1cfa;
+    box-shadow: 0 4px 20px #000a, 0 0 0 2px #e3bc7ae0, 0 0 24px #d9a95b65;
+}
+
+.env-landmark-number
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #be965c;
+    color: #241b12;
+    font: 700 11px var(--font-sans);
+}
+
+.env-landmark-label
+{
+    font-weight: 500;
+}
+
+.env-explore-control
+{
+    position: absolute;
+    left: clamp(18px, 3.6vw, 48px);
+    bottom: 116px;
+    z-index: 6;
+}
+
+.env-explore-toggle
+{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 13px;
+    background: #161517e9;
+    color: #f1e5d7;
+    border: 1px solid #b798645c;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px #0006;
+    backdrop-filter: blur(14px);
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: 13px;
+}
+
+.env-explore-icon
+{
+    color: #d7ad6f;
+    font-size: 20px;
+}
+
+.env-explore-count
+{
+    padding: 4px 6px;
+    color: #d6b27e;
+    border: 1px solid #bb955c47;
+    border-radius: 4px;
+    font: 11px var(--font-sans);
+}
+
+.env-place-menu
+{
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    width: 295px;
+    max-height: min(380px, 47vh);
+    overflow: auto;
+    padding: 6px;
+    background: #171515f2;
+    border: 1px solid #bc985f70;
+    border-radius: 10px;
+    box-shadow: 0 16px 45px #0008;
+    backdrop-filter: blur(15px);
+}
+
+.env-place-menu button
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px;
+    border: 0;
+    border-bottom: 1px solid #e8d1ac1c;
+    color: #f0e3cc;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    font-size: 12px;
+}
+
+.env-place-menu button:hover,
+.env-place-menu button:focus-visible
+{
+    background: #d8ac6d21;
+}
+
+.env-place-menu small
+{
+    color: #d7ab6d;
+}
+
+.env-place-card
+{
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    right: clamp(18px, 3.6vw, 48px);
+    transform: translateY(-50%);
+    width: min(344px, calc(100% - 34px));
+    padding: 28px 26px 23px;
+    background: linear-gradient(145deg, #241e1ae9, #111013f0);
+    border: 1px solid #c9a36a6c;
+    border-radius: 3px;
+    box-shadow: 0 20px 60px #000a;
+    backdrop-filter: blur(15px);
+    animation: env-panel-in 350ms ease-out both;
+}
+
+@keyframes env-panel-in
+{
+    from
+    {
+        opacity: 0;
+        transform: translate(14px, -48%);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translate(0, -50%);
+    }
+}
+
+.env-place-close
+{
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    font-size: 25px;
+    color: #efd5ac;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.env-place-eyebrow
+{
+    display: block;
+    color: #ddb784;
+    font-size: 10px;
+    letter-spacing: 0.20em;
+}
+
+.env-place-card h3
+{
+    margin: 18px 0 6px;
+    font-family: var(--font-display);
+    font-size: 32px;
+    line-height: 1.08;
+    font-weight: 400;
+}
+
+.env-place-period
+{
+    color: #c8b79e;
+    font-size: 12px;
+}
+
+.env-place-lead
+{
+    margin: 22px 0 8px;
+    color: #efd4ac;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.env-place-body
+{
+    font-size: 13px;
+    color: #d2c7b8;
+    line-height: 1.7;
+}
+
+.env-back-button
+{
+    margin-top: 15px;
+    padding: 9px 0;
+    color: #e0b77d;
+    border: 0;
+    border-bottom: 1px solid #d5a76775;
+    background: transparent;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px)
+{
+    .env-place-card
+    {
+        right: 18px;
+        width: 290px;
+    }
+    .env-place-card h3
+    {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 680px)
+{
+    .env-landmark-label
+    {
+        display: none;
+    }
+    .env-landmark-pin
+    {
+        padding: 3px;
+    }
+    .env-landmark-number
+    {
+        width: 25px;
+        height: 25px;
+    }
+    .env-place-card
+    {
+        top: auto;
+        right: 12px;
+        left: 12px;
+        bottom: 175px;
+        transform: none;
+        width: auto;
+        padding: 17px;
+        animation: none;
+    }
+    .env-place-card h3
+    {
+        font-size: 23px;
+        margin: 8px 0 4px;
+    }
+    .env-place-body
+    {
+        max-height: 58px;
+        overflow: auto;
+        line-height: 1.5;
+    }
+    .env-place-lead
+    {
+        margin: 9px 0 4px;
+    }
+    .env-back-button
+    {
+        margin-top: 3px;
+    }
+    .env-explore-control
+    {
+        bottom: 176px;
+        left: 15px;
+    }
+    .env-explore-toggle
+    {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+}
+@media (min-width: 681px)
+{
+    .env-place-card--left
+    {
+        right: auto;
+        left: clamp(18px, 3.6vw, 48px);
+    }
+}
+
+.env-explore-control
+{
+    bottom: 32px;
+}
+
+.env-place-card
+{
+    max-height: calc(100% - 170px);
+    overflow-y: auto;
+}
+
+.env-place-close:hover,
+.env-back-button:hover
+{
+    color: #fff6e6;
+}
+
+.env-sky-glow
+{
+    background: radial-gradient(ellipse at 74% 65%, #e5a46730, transparent 63%);
+}
+
+.env-vignette
+{
+    background:
+        radial-gradient(ellipse at 50% 75%, #e5b88a0c 0%, transparent 68%),
+        linear-gradient(90deg, #0d0d1345 0%, transparent 30%, transparent 70%, #0c0d1450 100%),
+        linear-gradient(0deg, #10101870 0%, transparent 23%, transparent 75%, #100f1770 100%);
+}
+
+@media (max-width: 680px)
+{
+    .env-place-card
+    {
+        bottom: 65px;
+        max-height: 44%;
+    }
+
+    .env-explore-control
+    {
+        bottom: 62px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce)
+{
+    .env-place-card
+    {
+        animation: none;
+    }
+}

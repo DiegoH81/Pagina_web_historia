@@ -7,7 +7,7 @@ export function Conclusions()
     return (
         <section
             id="conclusiones"
-            className="relative isolate flex min-h-svh items-end justify-center overflow-hidden bg-night px-6 pt-32 pb-24 text-cream"
+            className="relative isolate flex min-h-svh items-end justify-center overflow-hidden bg-night px-6 pt-32 pb-24 text-cream before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[3] before:h-[clamp(2.5rem,6vw,6rem)] before:bg-linear-to-b/srgb before:from-night before:to-transparent"
         >
             <motion.img
                 src="/images/conclusions/escuela_de_atenas.webp"

@@ -10,7 +10,7 @@ export function Consequences()
     const ActiveIcon = active.icon
 
     return (
-        <section id="consecuencias" className="relative overflow-hidden bg-night py-24 text-cream">
+        <section id="consecuencias" className="relative overflow-hidden bg-night py-24 text-cream before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[3] before:h-[clamp(2.5rem,6vw,6rem)] before:bg-linear-to-b/srgb before:from-[#0a0807] before:to-transparent">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_80%_0%,rgba(212,162,76,0.12),transparent_55%)]" />
 
             <div className="relative mx-auto max-w-[1600px] px-6 lg:px-14">

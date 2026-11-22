@@ -39,7 +39,7 @@ export default function MuseoRenacentista()
 
     return (
         <section id="personajes" className="rm-section" aria-label="Museo de personajes del Renacimiento">
-            <div className="rm-stage">
+            <div className="rm-stage before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[3] before:h-[clamp(2.5rem,6vw,6rem)] before:bg-linear-to-b/srgb before:from-night before:to-transparent">
                 <Suspense fallback={<div className="rm-loading">Preparando la galería…</div>}>
                     <MuseumScene selected={selected} isFinal={isFinal} room={room} onSelect={selectById} />
                 </Suspense>

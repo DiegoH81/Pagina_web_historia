@@ -100,7 +100,7 @@ export default function EnvironmentViewer()
     }
 
     return (
-        <div className="env-root" style={{ backgroundColor: sky.top }}>
+        <div className="env-root before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[3] before:h-[clamp(1rem,2vw,2rem)] before:bg-linear-to-b/srgb before:from-cream before:to-transparent before:via-cream/40 before:via-[35%] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:z-[3] after:h-[clamp(1.5rem,3vw,3.25rem)] after:bg-linear-to-t/srgb after:from-night after:to-transparent after:via-night/50 after:via-[40%]" style={{ backgroundColor: sky.top }}>
             <div className="env-sky" style={{ background: `linear-gradient(180deg, ${sky.top} 0%, ${sky.bottom} 100%)` }}>
                 <div className="env-sky-glow" style={{ opacity: 0.08 + sky.dayFactor * 0.42 }} />
             </div>

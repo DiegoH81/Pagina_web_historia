@@ -27,7 +27,7 @@ export function Discoveries()
         <section
             id="descubrimientos"
             onKeyDown={handleKeyDown}
-            className="relative isolate flex min-h-svh flex-col overflow-hidden bg-night pt-16 text-cream"
+            className="relative isolate flex min-h-svh flex-col overflow-hidden bg-night pt-16 text-cream before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[3] before:h-[clamp(1.5rem,3vw,3.25rem)] before:bg-linear-to-b/srgb before:from-cream before:to-transparent before:via-cream/40 before:via-[35%]"
         >
             <AnimatePresence>
                 <motion.img

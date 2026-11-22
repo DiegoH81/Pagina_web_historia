@@ -1,14 +1,19 @@
 import { Navbar } from "./components/layout/NavBar"
 import { SECTIONS } from "./data/sections"
+
 import { Hero } from "./sections/Hero"
+import { Introduction } from './sections/Introduction'
 
 
-function App() {
+
+function App()
+{
   return (
     <>
         <Navbar />
         <main>
             <Hero/>
+            <Introduction />
 
             {SECTIONS.map((section) => (
             <section key={section.id} id={section.id} className="flex min-h-screen items-center px-6">

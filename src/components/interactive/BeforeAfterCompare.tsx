@@ -72,7 +72,7 @@ interface ComparePaneProps
     align: 'left' | 'right'
 }
 
-function ComparePane({ work, label, align }: ComparePaneProps)
+function ComparePane({ work, align }: ComparePaneProps)
 {
     return (
         <AnimatePresence mode="wait">

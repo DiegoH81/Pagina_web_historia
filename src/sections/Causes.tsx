@@ -9,7 +9,7 @@ export function Causes()
     return (
         <section
             id="causas"
-            className="relative overflow-hidden bg-[url('/images/causes/mesa_madera.webp')] bg-cover bg-center py-24"
+            className="relative overflow-hidden bg-[url('/images/causes/mesa_madera.webp')] bg-cover bg-center py-24 before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[3] before:h-[clamp(1.5rem,3vw,3.25rem)] before:bg-linear-to-b/srgb before:from-night before:to-transparent before:via-night/40 before:via-[35%] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:z-[3] after:h-[clamp(1.5rem,3vw,3.25rem)] after:bg-linear-to-t/srgb after:from-cream after:to-transparent after:via-cream/50 after:via-[40%]"
         >
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(10,6,8,0.85)_100%)]" />
 

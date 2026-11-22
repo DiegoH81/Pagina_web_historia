@@ -16,7 +16,7 @@ export function Introduction()
         <section
             id="introduccion"
             ref={sectionRef}
-            className="relative overflow-hidden bg-cream text-ink lg:min-h-svh"
+            className="relative overflow-hidden bg-cream text-ink lg:min-h-svh after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:z-[3] after:h-[clamp(1.5rem,3vw,3.25rem)] after:bg-linear-to-t/srgb after:from-cream after:to-transparent after:via-cream/50 after:via-[40%]"
         >
             <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-48 bg-linear-to-b from-night to-transparent lg:h-64" />
 

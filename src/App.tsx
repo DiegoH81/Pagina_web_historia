@@ -3,7 +3,7 @@ import { SECTIONS } from "./data/sections"
 
 import { Hero } from "./sections/Hero"
 import { Introduction } from './sections/Introduction'
-
+import { Causes } from './sections/Causes'
 
 
 function App()
@@ -14,6 +14,7 @@ function App()
         <main>
             <Hero/>
             <Introduction />
+            <Causes />
 
             {SECTIONS.map((section) => (
             <section key={section.id} id={section.id} className="flex min-h-screen items-center px-6">
